@@ -13,8 +13,7 @@
 template <typename T>
 struct function_traits
 	: public function_traits<decltype(&T::operator())>
-{
-};
+{};
 // For generic types, directly use the result of the signature of its 'operator()'
 
 template <typename ClassType, typename ReturnType, typename... Args>

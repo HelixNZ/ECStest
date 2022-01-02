@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ECStest.cpp">
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="profiler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,12 +41,6 @@
     <ClInclude Include="component_tags.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="component_system.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="entity_chunk.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="entity_manager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -54,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="typefactory.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="profiler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

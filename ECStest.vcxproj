@@ -72,16 +72,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\VLD\Visual Leak Detector\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\VLD\Visual Leak Detector\lib\Win64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\VLD\Visual Leak Detector\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\VLD\Visual Leak Detector\lib\Win64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -126,7 +126,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>vld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -146,17 +146,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ECStest.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="profiler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="component.h" />
     <ClInclude Include="component_camera.h" />
-    <ClInclude Include="component_system.h" />
     <ClInclude Include="component_tags.h" />
     <ClInclude Include="component_transform.h" />
     <ClInclude Include="entity.hpp" />
-    <ClInclude Include="entity_chunk.h" />
     <ClInclude Include="entity_manager.hpp" />
+    <ClInclude Include="profiler.h" />
     <ClInclude Include="typefactory.hpp" />
     <ClInclude Include="functiontraits.h" />
     <ClInclude Include="properties.h" />
